@@ -1,22 +1,33 @@
 <template>
-  <div id="app">
-    <!-- <router-view></router-view> -->
-    对对对对
-  </div>
+    <div>
+        <div class="first">
+            <span>df</span>
+            <span v-html="msg"></span>
+        </div>
+        <hello></hello>
+    </div>
 </template>
-<script lang="ts">
-// import { Component, Vue } from 'vue-property-decorator';
-
-// @Component({})
-// export default class App extends Vue{
-//   created(){
+<script>
+    //es6
+    import hello from './src/components/hello.vue';//导入当前目录的hello.vue
     
-//   }
-// }
+    export default {
+        name:"app",
+        data () {
+            return {
+                msg: 'first Component ',
+            }
+        },
+        components:{
+        //等价于
+        // hello: hello
+            hello
+        }
+    }
 </script>
 
 <style lang="scss">
-#app {
+.first{
   height: 100px;
   width: 100px;
   background-color: red;

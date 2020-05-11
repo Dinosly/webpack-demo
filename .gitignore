@@ -1,0 +1,4 @@
+# /mtk/ 过滤整个文件夹
+# *.zip 过滤所有.zip文件
+# /mtk/do.c 过滤某个具体文件
+/node_modules/
